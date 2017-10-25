@@ -1,0 +1,83 @@
+一.策略模式strategy
+定义了算法族，分别封装起来，让它们之间可相互替换，此模式让算法的变化独立于使用算法的客户。
+定义了算法族(各个接口,不同的行为)，分别封装起来，让它们之间可相互替换(在客户基类里作为属性替换)，
+此模式让算法的变化独立于使用算法的客户(Role)。
+Attack,Name,Display三个接口,定义行为(算法族)
+BaseAttack,BaseName,BaseDisplay提供接口的一种实现
+AnotherAttack,AnotherName,AnotherDisplay提供接口的另一种实现
+Role基类中将这几个接口作为属性,若有更多接口,添加属性即可
+
+roleA.setAttack(new BaseAttack()).setDisplay(new BaseDisplay()).setName(new BaseName());
+
+最后总结一下OO的原则：
+1、封装变化（把可能变化的代码封装起来）
+2、多用组合，少用继承（我们使用组合的方式，为客户设置了算法）
+3、针对接口编程，不针对实现（对于Role类的设计完全的针对角色，和技能的实现没有关系）
+
+二.观察者模式observer
+定义了一个对象(主题)与多个依赖者之间的一对多的依赖，这样一来，当这个对象改变时，它的所有的依赖者都会收到通知并自动更新。
+服务号中维护了所有向它订阅消息的使用者，当服务号有新消息时，通知所有的使用者。整个架构是一种松耦合，主题的实现不依赖与使用者，
+当增加新的使用者时，主题的代码不需要改变；使用者如何处理得到的数据与主题无关；
+Subject:主题的接口
+BaseSubject:主题的一个具体实现,相当于公众号
+
+Observer:观察者接口
+
+ObserverA:具体的观察者,需要拥有主题属性,并注册为观察者
+public class ObserverA implements Observer{
+	private Subject subject;
+	public ObserverA(Subject subject){
+		this.subject=subject;
+		//本类对象注册为观察者
+		subject.registObserver(this);
+	}
+}
+
+
+三.装饰者模式decorator
+装饰者模式：若要扩展功能，装饰者提供了比集成更有弹性的替代方案，动态地将责任附加到对象上。
+先简单描述下装饰者模式发挥作用的地方，当我们设计好了一个类，我们需要给这个类添加一些辅助的功能，并且不希望改变这个类的代码，
+这时候就是装饰者模式大展雄威的时候了。这里还体现了一个原则：类应该对扩展开放，对修改关闭。
+Equip:装备接口
+ArmEquip:武器装备
+RingEquip:戒指装备
+ShoeEquip:鞋子装备
+WristEquip:护腕装备
+
+以上都是设计好的类,下面添加各种宝石(装饰者)
+EquipDecorator:装饰者接口
+public interface EquipDecorator extends Equip{}
+具体的装饰者
+public class BlueDecorator implements EquipDecorator{
+	//每个装饰品维护一件装备
+	private Equip equip;
+	//装饰者类的构造器中应该接收一个用来被装饰的对象
+	public RedDecorator(Equip equip){
+		this.equip=equip;
+	}
+}
+
+四.工厂模式factory
+1.静态工厂模式
+2.简单工厂模式
+3.工厂方法模式
+4.抽象工厂模式
+
+五.单例模式singleton
+
+六.命令模式commond
+将"请求"封装成对象,以便使用不同的请求,队列或日志来参数和其他对象.命令模式也支持可撤销的操作
+即将请求封装成对象,将动作请求者和动作执行者解耦
+
+假设现在有电视、电脑、电灯等家电，现在需要你做个遥控器控制所有家电的开关，
+要求做到每个按钮对应的功能供用户个性化，对于新买入家电要有非常强的扩展性。
+
+
+
+
+
+
+
+
+
+
