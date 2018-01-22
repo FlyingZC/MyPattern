@@ -47,7 +47,7 @@ public class Proxy implements UserModelApi{
 	
 	public String getDepId() {
 		//需要判断是否已经装载过了
-		if(!this.loaded){
+		if(!this.loaded){//若没有装载deptId属性,重新查询
 			//从数据库中重新装载
 			reload();
 			//设置重新装载的标志为true

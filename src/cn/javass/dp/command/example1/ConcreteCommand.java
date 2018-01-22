@@ -4,7 +4,7 @@ package cn.javass.dp.command.example1;
  */
 public class ConcreteCommand implements Command {
 	/**
-	 * 持有相应的接受者对象
+	 * 持有相应的接受者对象(接收命令的对象)
 	 */
 	private Receiver receiver = null;
 	/**

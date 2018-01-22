@@ -7,12 +7,12 @@ import java.sql.*;
  */
 public class UserManager {	
 	/**
-	 * 根据部门编号来获取该部门下的所有人员
+	 * 根据部门编号来获取该部门下的所有人员.该方法只查id和name,且集合存储的是代理对象
 	 * @param depId 部门编号
 	 * @return 该部门下的所有人员
 	 */
-	public Collection<UserModelApi> getUserByDepId(String depId)throws Exception{
-		Collection<UserModelApi> col = new ArrayList<UserModelApi>();
+	public Collection<UserModelApi> getUserListByDepId(String depId)throws Exception{
+		Collection<UserModelApi> userList = new ArrayList<UserModelApi>();
 		Connection conn = null;
 		try{
 			conn = this.getConnection();
@@ -32,7 +32,7 @@ public class UserManager {
 				proxy.setUserId(rs.getString("userId"));
 				proxy.setName(rs.getString("name"));
 				
-				col.add(proxy);
+				userList.add(proxy);
 			}
 			
 			rs.close();
@@ -40,7 +40,7 @@ public class UserManager {
 		}finally{
 			conn.close();
 		}
-		return col;
+		return userList;
 	}
 	/**
 	 * 获取与数据库的连接

@@ -1,4 +1,5 @@
 package com.zc.l02abstractfactory;
+
 public class Red implements Color {
 
    @Override

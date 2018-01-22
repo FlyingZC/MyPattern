@@ -2,7 +2,7 @@ package cn.javass.dp.mediator.example3;
 
 import java.util.*;
 /**
- * 实现部门和人员交互的中介者实现类
+ * 实现部门和人员交互的中介者实现类.该类为单例
  * 说明：为了演示的简洁性，只示例实现撤销部门和人员离职的功能
  */
 public class DepUserMediatorImpl{

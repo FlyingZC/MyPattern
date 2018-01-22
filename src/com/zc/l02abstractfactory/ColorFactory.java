@@ -1,4 +1,5 @@
 package com.zc.l02abstractfactory;
+
 //继承自抽象工厂的工厂
 public class ColorFactory extends AbstractFactory {
 	
