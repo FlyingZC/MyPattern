@@ -6,7 +6,6 @@ public class SendMoneyVisitor implements Visitor
     @Override
     public void visit(CustomerBase customer)
     {
-        // TODO Auto-generated method stub
 
     }
 

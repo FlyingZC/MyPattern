@@ -1,7 +1,7 @@
 package com.zc.l19observer;
 
 /**
- * <观察者接口>
+ * <观察者接口,温度观察者>
  * <功能详细描述>
  * 
  * @author  Administrator

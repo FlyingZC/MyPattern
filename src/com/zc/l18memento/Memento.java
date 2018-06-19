@@ -11,11 +11,16 @@ package com.zc.l18memento;
  */
 public class Memento
 {
-    private String state;//用于保存备忘录的状态
-    public Memento(String stateToSave){
-        state=stateToSave;
+    // 用于保存备忘录的状态
+    private String state;
+
+    public Memento(String stateToSave)
+    {
+        state = stateToSave;
     }
-    public String getSavedState(){
+
+    public String getSavedState()
+    {
         return state;
     }
 }

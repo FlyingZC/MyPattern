@@ -1,4 +1,4 @@
-package com.zc.l20state;
+package com.zc.l20state.player;
 
 /**播放状态*/
 public class PlayingState implements State

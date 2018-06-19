@@ -1,7 +1,8 @@
 package cn.javass.dp.state.example5;
 
 public class NormalVoteState implements VoteState{
-	public void vote(String user, String voteItem, VoteManager voteManager) {
+    @Override
+	public void vote(String user, String voteItem, VoteManagerContext voteManager) {
 		//正常投票
 		//记录到投票记录中
 		voteManager.getMapVote().put(user, voteItem);

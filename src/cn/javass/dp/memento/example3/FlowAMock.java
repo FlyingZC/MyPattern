@@ -3,7 +3,10 @@ package cn.javass.dp.memento.example3;
 import java.io.Serializable;
 
 /**
- * 模拟运行流程A，只是一个示意，代指某个具体流程
+ * 原发器.模拟运行流程A，只是一个示意，代指某个具体流程
+ * 1.其内部状态无需通过getter/setter暴露出去了
+ * 2.有个内部类MementoImpl用于保存 原发器的内部状态.
+ * 3.在这个对象中提供创建备忘录对象 和 根据备忘录对象 恢复内部状态的方法
  */
 public class FlowAMock implements Serializable {
 	/**
@@ -52,7 +55,7 @@ public class FlowAMock implements Serializable {
 		this.tempResult += 22;
 	}	
 	/**
-	 * 创建保存原发器对象的状态的备忘录对象
+	 * 创建保存原发器对象的状态的 备忘录对象
 	 * @return 创建好的备忘录对象
 	 */
 	public FlowAMockMemento createMemento() {

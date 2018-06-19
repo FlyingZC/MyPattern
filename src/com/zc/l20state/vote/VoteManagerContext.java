@@ -1,9 +1,9 @@
-package cn.javass.dp.state.example5;
+package com.zc.l20state.vote;
 import java.util.*;
 /**
- * 投票管理
+ * 投票管理.上下文对象.持有state
  */
-public class VoteManager {
+public class VoteManagerContext {
 	/**
 	 * 记录当前每个用户对应的状态处理对象，每个用户当前的状态是不同的
 	 * Map<String,VoteState>对应Map<用户名称,当前对应的状态处理对象>
@@ -57,15 +57,20 @@ public class VoteManager {
 
 		VoteState state = null;
 		//2：直接从数据库获取该用户对应的下一个状态的状态编码
-		String stateId = "从数据库中获取这个值";
+		String stateId = "正常投票";
+		if (oldVoteCount > 1 && oldVoteCount <= 5)
+		{
+		    stateId = "重复投票";
+		}
+		if (oldVoteCount > 5 && oldVoteCount <= 8)
+		{
+		    stateId = "恶意投票";
+		}
+		else if (oldVoteCount > 8)
+		{
+		    stateId = "黑名单";
+		}
 		//开始根据状态编码来创建需用的状态对象
-		
-		//根据状态编码去获取相应的类
-		String className = "根据状态编码去获取相应的类";
-		//使用反射创建对象实例，简单示意一下
-		Class c = Class.forName(className);
-		state = (VoteState)c.newInstance();
-		
 		if("正常投票".equals(stateId)){
 			state = new NormalVoteState();
 		}else if("重复投票".equals(stateId)){

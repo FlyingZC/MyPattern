@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <管理者>
+ * <备忘录管理者.管理者>
  * <需要处理在何时,为何 对发起者进行数据保存和回滚 保存备忘录>
  * 
  * @author  zc
@@ -14,11 +14,18 @@ import java.util.List;
  */
 public class Caretaker
 {
-    private List<Memento> savedStates=new ArrayList<Memento>();
-    public void addMemento(Memento m){
+    /**
+     * 记录多个备忘录状态
+     */
+    private List<Memento> savedStates = new ArrayList<Memento>();
+
+    public void addMemento(Memento m)
+    {
         savedStates.add(m);
     }
-    public Memento getMemento(int index){
+
+    public Memento getMemento(int index)
+    {
         return savedStates.get(index);
     }
 }

@@ -10,11 +10,11 @@ public class Test
     public static void main(String[] args)
     {
         SendType sender = new SendTypeEmail();
-        MessageType msgType = new MessageTypeExtraUrgent(sender);
+        MessageType msgType = new MessageTypeExtraUrgent(sender);// 加急  + 发送email
         msgType.send("这是一条短消息!", "zz");
         
         sender = new SendTypeMobile();
-        msgType = new MessageTypeCommon(sender);
+        msgType = new MessageTypeCommon(sender);// 普通 + 手机发送
         msgType.send("这是一条短消息!", "zx");
     }
 }

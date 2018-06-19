@@ -1,7 +1,7 @@
 package com.zc.l19observer;
 
 /**
- * <被观察者>
+ * <被观察者Subject>
  * <功能详细描述>
  * 
  * @author  Administrator
@@ -11,7 +11,10 @@ package com.zc.l19observer;
  */
 public interface TemperatureSubject
 {
+    /**添加观察者*/
     public void addObserver(TemperatureObserver temperatureObserver);
+    /**移除观察者*/
     public void removeOberver(TemperatureObserver temperatureObserver);
+    /**通知所有观察者*/
     public void notice();
 }

@@ -1,7 +1,8 @@
 package cn.javass.dp.state.example5;
 
 public class SpiteVoteState implements VoteState{
-	public void vote(String user, String voteItem, VoteManager voteManager) {
+    @Override
+	public void vote(String user, String voteItem, VoteManagerContext voteManager) {
 		//恶意投票
 		//取消用户的投票资格，并取消投票记录
 		String s = voteManager.getMapVote().get(user);

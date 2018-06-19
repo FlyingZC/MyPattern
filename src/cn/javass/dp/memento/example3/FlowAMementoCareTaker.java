@@ -2,7 +2,7 @@ package cn.javass.dp.memento.example3;
 
 
 /**
- * 负责保存模拟运行流程A的对象的备忘录对象
+ * 备忘录管理者.负责保存模拟运行流程A的对象的备忘录对象
  */
 public class FlowAMementoCareTaker {
 	/**

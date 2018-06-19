@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * <被观察者类>
+ * <被观察者类,温度站>
  * <功能详细描述>
  * 
  * @author  Administrator
@@ -14,13 +14,14 @@ import java.util.Set;
  * @since  [产品/模块版本]
  */
 public class TemperatureStation implements TemperatureSubject
-{
+{   // 温度观察者
     private Set<TemperatureObserver> temperatureObservers;
+    // 温度
     private int temperature;
-    
+
     public TemperatureStation(int temperature)
     {
-        temperatureObservers=new HashSet<TemperatureObserver>();
+        temperatureObservers = new HashSet<TemperatureObserver>();
         this.temperature = temperature;
     }
 
@@ -39,21 +40,24 @@ public class TemperatureStation implements TemperatureSubject
     @Override
     public void notice()
     {
-        Iterator<TemperatureObserver> it=temperatureObservers.iterator();
-        while(it.hasNext()){
-            TemperatureObserver temperatureObserver=it.next();
+        Iterator<TemperatureObserver> it = temperatureObservers.iterator();
+        while (it.hasNext())
+        {
+            TemperatureObserver temperatureObserver = it.next();
             temperatureObserver.update(temperature);
         }
     }
+
     /** <设置temperature并调用notice>
      * <功能详细描述>
      * @param newTemperature
      * @see [类、类#方法、类#成员]
      */
-    public void setTemperature(int newTemperature){
-        System.out.println("Setting temperature to "+newTemperature);
-        temperature=newTemperature;
-        notice();
+    public void setTemperature(int newTemperature)
+    {
+        System.out.println("Setting temperature to : " + newTemperature);
+        temperature = newTemperature;
+        notice();// 通知所有观察者 温度变更
     }
 
 }
