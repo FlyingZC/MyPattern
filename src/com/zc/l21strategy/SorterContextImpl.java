@@ -1,6 +1,6 @@
 package com.zc.l21strategy;
 
-public class MySorter extends Sorter
+public class SorterContextImpl extends SorterContext
 {
 
     @Override

@@ -5,21 +5,21 @@ package com.zc.l21strategy;
  * @author  zhangcheng
  * @version  [版本号, 2017年7月17日]
  */
-public abstract class Sorter
+public abstract class SorterContext
 {
-    private ISort strategy;
+    private ISortStrategy strategy;
 
     /** 
      * 根据 传入的不同策略(strategy)初始化 Sorter 
      * @param strategy
      * @see [类、类#方法、类#成员]
      */
-    public void setSorter(ISort strategy)
+    public void setSorter(ISortStrategy strategy)
     {
         this.strategy = strategy;
     }
 
-    public ISort getSorter()
+    public ISortStrategy getSorter()
     {
         return this.strategy;
     }

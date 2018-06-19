@@ -1,6 +1,10 @@
 package com.zc.l21strategy;
 
-public class BubbleSort implements ISort
+/**
+ * @author flyingzc
+ * 策略具体实现类
+ */
+public class BubbleSort implements ISortStrategy
 {
 
     @Override

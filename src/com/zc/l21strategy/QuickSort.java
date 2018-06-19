@@ -1,6 +1,10 @@
 package com.zc.l21strategy;
 
-public class QuickSort implements ISort
+/**
+ * @author flyingzc
+ * 策略具体实现类
+ */
+public class QuickSort implements ISortStrategy
 {
 
     @Override

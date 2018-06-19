@@ -1,4 +1,4 @@
-package com.zc.l13COR;
+package com.zc.l13cor;
 
 public enum LoggerLevel
 {
