@@ -1,7 +1,7 @@
 package cn.javass.dp.bridge.example6;
 
 /**
- * 抽象的消息对象
+ * 抽象的消息对象.消息类型
  */
 public abstract class AbstractMessage {
 	/**

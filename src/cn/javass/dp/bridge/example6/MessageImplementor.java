@@ -1,6 +1,6 @@
 package cn.javass.dp.bridge.example6;
 /**
- * 实现发送消息的统一接口
+ * 实现发送消息的统一接口.发送消息的方式
  */
 public interface MessageImplementor {
 	/**

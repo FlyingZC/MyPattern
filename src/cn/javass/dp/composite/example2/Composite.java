@@ -45,5 +45,6 @@ public class Composite extends Component {
 		}
 		return null;
 	}
+
 }
 

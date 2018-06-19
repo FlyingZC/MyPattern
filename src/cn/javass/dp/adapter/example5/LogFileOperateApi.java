@@ -2,7 +2,7 @@ package cn.javass.dp.adapter.example5;
 
 import java.util.List;
 /**
- * 日志文件操作接口
+ * 旧接口.日志文件操作接口
  */
 public interface LogFileOperateApi {
 	/**

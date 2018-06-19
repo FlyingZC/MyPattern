@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * 实现对日志文件的操作
+ * 旧接口实现类.实现对日志文件的操作
  */
 public class LogFileOperate implements LogFileOperateApi{
 	/**

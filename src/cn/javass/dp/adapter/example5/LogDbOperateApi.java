@@ -1,7 +1,7 @@
 package cn.javass.dp.adapter.example5;
 import java.util.*;
 /**
- * 定义操作日志的应用接口，为了示例的简单，
+ * 新接口.定义操作日志的应用接口，为了示例的简单，
  * 只是简单的定义了增删改查的方法
  */
 public interface LogDbOperateApi {

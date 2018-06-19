@@ -1,5 +1,6 @@
 package com.zc.l11proxy;
 
-public interface Image {
-	public void showImage();
+public interface Image
+{
+    public void showImage();
 }
