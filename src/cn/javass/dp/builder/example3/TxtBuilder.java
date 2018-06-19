@@ -4,12 +4,12 @@ import java.util.Collection;
 import java.util.Map;
 
 /**
- * 实现导出数据到文本文件的的构建器对象
+ * 瀹炵幇瀵煎嚭鏁版嵁鍒版枃鏈枃浠剁殑鐨勬瀯寤哄櫒瀵硅薄
  */
 public class TxtBuilder implements Builder
 {
     /**
-     * 用来记录构建的文件的内容，相当于产品
+     * 鐢ㄦ潵璁板綍鏋勫缓鐨勬枃浠剁殑鍐呭锛岀浉褰撲簬浜у搧
      */
     private StringBuffer bufferResult = new StringBuffer();
 
@@ -17,9 +17,9 @@ public class TxtBuilder implements Builder
     {
         for (String tblName : mapData.keySet())
         {
-            //先拼接表名称
+            //鍏堟嫾鎺ヨ〃鍚嶇О
             bufferResult.append(tblName + "\n");
-            //然后循环拼接具体数据
+            //鐒跺悗寰幆鎷兼帴鍏蜂綋鏁版嵁
             for (ExportDataModel dataModel : mapData.get(tblName))
             {
                 bufferResult.append(dataModel.getProductId() + "," + dataModel.getPrice() + "," + dataModel.getAmount() + "\n");

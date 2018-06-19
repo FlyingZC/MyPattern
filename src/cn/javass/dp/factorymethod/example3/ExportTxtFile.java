@@ -1,12 +1,12 @@
 package cn.javass.dp.factorymethod.example3;
 /**
- * µ¼³ö³ÉÎÄ±¾ÎÄ¼ş¸ñÊ½µÄ¶ÔÏó,Ïàµ±ÓÚ¾ßÌåµÄProduct
+ * å¯¼å‡ºæˆæ–‡æœ¬æ–‡ä»¶æ ¼å¼çš„å¯¹è±¡,ç›¸å½“äºå…·ä½“çš„Product
  */
 public class ExportTxtFile implements ExportFileApi{
     
 	public boolean export(String data) {
-		//¼òµ¥Ê¾ÒâÒ»ÏÂ£¬ÕâÀïĞèÒª²Ù×÷ÎÄ¼ş
-		System.out.println("µ¼³öÊı¾İ"+data+"µ½ÎÄ±¾ÎÄ¼ş");
+		//ç®€å•ç¤ºæ„ä¸€ä¸‹ï¼Œè¿™é‡Œéœ€è¦æ“ä½œæ–‡ä»¶
+		System.out.println("å¯¼å‡ºæ•°æ®"+data+"åˆ°æ–‡æœ¬æ–‡ä»¶");
 		return true;
 	}
 }

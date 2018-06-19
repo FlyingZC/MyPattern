@@ -1,22 +1,22 @@
 package cn.javass.dp.factorymethod.example3;
 /**
- * ÊµÏÖµ¼³öÊý¾ÝµÄÒµÎñ¹¦ÄÜ¶ÔÏó,Ïàµ±ÓÚ¹¤³§·½·¨,ÆäÖÐ³éÏóµÄ¹¤³§·½·¨factoryMethodÓÉ¸Ã¹¤³§µÄ×ÓÀà×ÔÐÐÊµÏÖ
- * ¹¤³§·½·¨Ä£Ê½µÄÒâÒå:¸Ã¸¸ÀàÔÚ²»ÖªµÀ¾ßÌåÊµÏÖÊ±,¿ÉÒÔÍê³É×ÔÉíµÄ¹¦ÄÜ,¶ø¾ßÌåµÄÊµÏÖÑÓ³Ùµ½×ÓÀàÖÐ.
+ * å®žçŽ°å¯¼å‡ºæ•°æ®çš„ä¸šåŠ¡åŠŸèƒ½å¯¹è±¡,ç›¸å½“äºŽå·¥åŽ‚æ–¹æ³•,å…¶ä¸­æŠ½è±¡çš„å·¥åŽ‚æ–¹æ³•factoryMethodç”±è¯¥å·¥åŽ‚çš„å­ç±»è‡ªè¡Œå®žçŽ°
+ * å·¥åŽ‚æ–¹æ³•æ¨¡å¼çš„æ„ä¹‰:è¯¥çˆ¶ç±»åœ¨ä¸çŸ¥é“å…·ä½“å®žçŽ°æ—¶,å¯ä»¥å®Œæˆè‡ªèº«çš„åŠŸèƒ½,è€Œå…·ä½“çš„å®žçŽ°å»¶è¿Ÿåˆ°å­ç±»ä¸­.
  */
 public abstract class ExportOperate {
 	/**
-	 * µ¼³öÎÄ¼þ
-	 * @param data ÐèÒª±£´æµÄÊý¾Ý
-	 * @return ÊÇ·ñ³É¹¦µ¼³öÎÄ¼þ
+	 * å¯¼å‡ºæ–‡ä»¶
+	 * @param data éœ€è¦ä¿å­˜çš„æ•°æ®
+	 * @return æ˜¯å¦æˆåŠŸå¯¼å‡ºæ–‡ä»¶
 	 */
 	public boolean export(String data){
-		//Ê¹ÓÃ¹¤³§·½·¨
+		//ä½¿ç”¨å·¥åŽ‚æ–¹æ³•
 		ExportFileApi api = factoryMethod();
 		return api.export(data);
 	}
 	/**
-	 * ¹¤³§·½·¨£¬´´½¨µ¼³öµÄÎÄ¼þ¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
-	 * @return µ¼³öµÄÎÄ¼þ¶ÔÏóµÄ½Ó¿Ú¶ÔÏó
+	 * å·¥åŽ‚æ–¹æ³•ï¼Œåˆ›å»ºå¯¼å‡ºçš„æ–‡ä»¶å¯¹è±¡çš„æŽ¥å£å¯¹è±¡
+	 * @return å¯¼å‡ºçš„æ–‡ä»¶å¯¹è±¡çš„æŽ¥å£å¯¹è±¡
 	 */
 	protected abstract ExportFileApi factoryMethod();
 }

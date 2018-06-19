@@ -1,13 +1,13 @@
-注意!!cn.javass.dp下的编码为gbk
+注意!!cn.javass.dp下的编码为gbk,已改为uft-8
 一.简单工厂模式
 simplefactory
 就是一个工厂类里有一个静态方法,用于根据传入的参数创建不同的实例
 
 example2:简单工厂模式示例
-	Factory:简单工厂
-	Api:工厂要创建的对象接口
-	ImplA,ImplB:具体对象
-	简单工厂类中 提供方法,用于创建具体的不同对象
+    Factory:简单工厂
+    Api:工厂要创建的对象接口
+    ImplA,ImplB:具体对象
+    简单工厂类中 提供方法,用于创建具体的不同对象
 
 二.外观模式
 facade
@@ -26,9 +26,9 @@ example3:外观模式在 "生成代码" 的应用
 三.适配器模式
 adapter
 example1:
-	Target:客户端想要的目标接口
-	Adaptee:需要被适配的旧接口
-	Adapter:适配器类,实现新接口,则需要实现新接口中的方法.持有旧接口对象,在实现的新接口方法中转调旧接口中的方法.
+    Target:客户端想要的目标接口
+    Adaptee:需要被适配的旧接口
+    Adapter:适配器类,实现新接口,则需要实现新接口中的方法.持有旧接口对象,在实现的新接口方法中转调旧接口中的方法.
 
 四.单例模式
 singleton
@@ -36,16 +36,16 @@ singleton
 五.工厂方法模式
 factory method
 example2:工厂方法模式 示例 
-	Product:产品,需要被创建的对象
-	ConcreteProduct:产品的一个具体类型
-	
-	Creator:工厂方法基类,包含 抽象方法createProduct()用于创建产品.但是具体实现交给各个子类实现
-	ConcreteCreator:工厂方法的一个具体实现,实现createProduct()方法
-	
+    Product:产品,需要被创建的对象
+    ConcreteProduct:产品的一个具体类型
+    
+    Creator:工厂方法基类,包含 抽象方法createProduct()用于创建产品.但是具体实现交给各个子类实现
+    ConcreteCreator:工厂方法的一个具体实现,实现createProduct()方法
+    
 
 example3:工厂方法模式 应用
-	ExportOperate:工厂方法类,提供抽象
-	
+    ExportOperate:工厂方法类,提供抽象
+    
 example5:一个工厂方法类中Creator,可以包含多个创建不同对象的工厂方法.但是这些工厂方法通常只在当前类中使用,最终不会暴露给客户端
 
 六.抽象工厂模式
@@ -66,14 +66,14 @@ abstract factory
 
 example1:使用 简单工厂 模式 实现 电脑组装
 example2:抽象工厂模式的 示例实现
-		AbstractFactory:抽象工厂基类,包含创建productA和productB的两个抽象方法
-		ConcreteFactory1和ConcreteFactory2:
-			抽象工厂类的两个具体实现,均重写了抽象工厂类中的createProductA和createProductB方法
-			但是它们,视情况返回创建了不同的productA和productB
+        AbstractFactory:抽象工厂基类,包含创建productA和productB的两个抽象方法
+        ConcreteFactory1和ConcreteFactory2:
+            抽象工厂类的两个具体实现,均重写了抽象工厂类中的createProductA和createProductB方法
+            但是它们,视情况返回创建了不同的productA和productB
 
 example3:抽象工厂模式 实现电脑组装匹配的主板和cpu P136
-		AbstractFactory:提供createCPU和createMainboard两种对象的抽象方法
-		Schema1和Schema2是两个实现,分别创建"匹配"的cpu和主板
+        AbstractFactory:提供createCPU和createMainboard两种对象的抽象方法
+        Schema1和Schema2是两个实现,分别创建"匹配"的cpu和主板
 
 example4:以上的抽象工厂模式 有一个小问题,即若想在抽象工厂接口中添加一种新的产品类型,则需要更改所有实现该接口的实现类(都需要添加该方法)
                            基于此问题提供  可拓展的抽象工厂的实现  
@@ -85,10 +85,10 @@ builder
 将一个复杂对象的构建与它的表示分离,使得同样的构建过程可以创建不同的表示.
 生成器 分离了 构建算法 和 具体的构造实现
 example2:生成器模式的标准实现
-	Director:导演类 持有 builder对象.调用builder.build()方法
-	Builder:生成器 类 持有 Product对象.并提供方法创建Prodcut中的具体部分.
-	
-	
+    Director:导演类 持有 builder对象.调用builder.build()方法
+    Builder:生成器 类 持有 Product对象.并提供方法创建Prodcut中的具体部分.
+    
+    
 example3:生成器模式重写 使用xml和text不同方式导出data中的data头部,data主体,data尾部.
 
 八.原型模式
@@ -124,15 +124,15 @@ example3:广义中介者模式 实现 部门员工关系
 proxy
 
 example2:代理模式示例
-	Proxy:代理类,持有被代理类的对象,调用被代理类的方法
-	RealSubject:被代理类
-	
+    Proxy:代理类,持有被代理类的对象,调用被代理类的方法
+    RealSubject:被代理类
+    
 example3:代理模式 实现 用户查询大数据量的用户信息(不分页),则第一次只查询所有的id和name,在查看详情时再查询其余的属性(如sex)
-	虚代理
-	UserModel:被代理类,UserModelApi:被代理接口
-	Proxy:代理类,其中id和name属性 直接访问被代理类的
-	但是由于第一次没查询其他属性.在获取sex属性时,会先在proxy中查询.再调用具体被代理类中的属性
-	
+    虚代理
+    UserModel:被代理类,UserModelApi:被代理接口
+    Proxy:代理类,其中id和name属性 直接访问被代理类的
+    但是由于第一次没查询其他属性.在获取sex属性时,会先在proxy中查询.再调用具体被代理类中的属性
+    
 example4:保护代理.只有该用户创建的订单,该用户才能修改.在代理类中加控制.
 
 example5:java动态代理 重写 上例子
@@ -143,14 +143,14 @@ example6:使用子类实现代理.代理类OrderProxy继承自被代理对象Order
 observer
 定义:定义对象间的一种 一对多的依赖关系.当一个对象的状态发送改变时,所有依赖于它的对象都得到通知并被自动更新.
 subject:目标对象1.一个目标可被多个观察者观察;2.目标提供对观察者注册和退订的维护;
-	3.当目标的状态发生变化时,目标负责通知所有注册的,有效的观察者.
+    3.当目标的状态发生变化时,目标负责通知所有注册的,有效的观察者.
 
 example1:观察者模式 示例
 example2:观察者模式 实现订阅报纸
-	观察者模式 两种模型:推模型,拉模型
-	推模型:目标对象 主动 向 观察者推送目标的详细信息,无论观察者是否需要,推送的信息通常是目标对象的全部或部分数据,相当于广播通信.
-	拉模型:目标对象在通知观察者的时候,只传递少量信息.若观察者需要更具体的信息,由观察者主动到目标对象中获取,
-		相当于是观察者从目标对象中拉数据.
+    观察者模式 两种模型:推模型,拉模型
+    推模型:目标对象 主动 向 观察者推送目标的详细信息,无论观察者是否需要,推送的信息通常是目标对象的全部或部分数据,相当于广播通信.
+    拉模型:目标对象在通知观察者的时候,只传递少量信息.若观察者需要更具体的信息,由观察者主动到目标对象中获取,
+        相当于是观察者从目标对象中拉数据.
 
 example4:使用java.util.Observable接口 实现观察者模式.
 
@@ -170,9 +170,9 @@ invoker.runCommand()->command.execute()->receiver.action()
 example2:命令模式完成 开机操作
 Box:机箱,相当于Invoker(调用者)
 Command:命令接口
-	实现类:OpenCommand:开机命令
+    实现类:OpenCommand:开机命令
 MainBoardApi:主板,相当于 receiver(命令接受者,具体执行命令)
-	实现类GigaMainBoard,MsiMainBoard
+    实现类GigaMainBoard,MsiMainBoard
 
 执行顺序:点机箱上的开机按钮->执行开机命令->调用主板上的开机方法
 box.openButtonPressed()->openCommand.execute()->mainBoard.open()
@@ -184,8 +184,23 @@ example4:可撤销的操作
 
 
 Command:调用计算机命令
-	实现类:AddCommand:excute()调用加法,undo()调用减法
+    实现类:AddCommand:excute()调用加法,undo()调用减法
 Operation:具体计算机计算的执行类,相当于receiver
+
+==================
+180227
+二十五.访问者模式
+visitor
+定义:表示 一个 作用于 某对象结构中的 各元素 的 操作,它使你可以在不改变各元素的类 的 前提 下 定义 作用于 这些元素的新操作.
+example1:不同客户 中 有不同的 serviceRequest方法,即不同的客户请求
+
+会导致 功能 和 实体类 耦合,每次需要加不同的功能 都需要修改相关的实体类
+
+example3:访问者模式的标准实现
+
+解决访问者模式每次都会对所有元素进行访问的问题(因为需要实现访问者接口visitor中的所有方法)
+方式1:对不需要的方法进行空实现,如visitor1中的visitElementA()实现为空
+方式2:在元素类Element中,进行条件判断,满足再调visitor中的访问方法
 
 
 

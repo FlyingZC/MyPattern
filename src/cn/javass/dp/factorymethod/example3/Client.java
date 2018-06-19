@@ -2,9 +2,9 @@ package cn.javass.dp.factorymethod.example3;
 
 public class Client {
 	public static void main(String[] args) {
-		//´´½¨ĞèÒªÊ¹ÓÃµÄCreator¶ÔÏó.ExportOperateÎªCreator½Ó¿Ú,ExportDBOperateÎª¾ßÌåÊµÏÖ,ÄÚ²¿°üº¬ÊµÏÖµÄfactoryMethod()
+		//åˆ›å»ºéœ€è¦ä½¿ç”¨çš„Creatorå¯¹è±¡.ExportOperateä¸ºCreatoræ¥å£,ExportDBOperateä¸ºå…·ä½“å®ç°,å†…éƒ¨åŒ…å«å®ç°çš„factoryMethod()
 		ExportOperate operate = new ExportDBOperate();
-		//µ÷ÓÃÊä³öÊı¾İµÄ¹¦ÄÜ·½·¨,Êµ¼ÊÉÏµ÷ÓÃ¸¸ÀàExportOperateÖĞµÄ·½·¨
-		operate.export("²âÊÔÊı¾İ");
+		//è°ƒç”¨è¾“å‡ºæ•°æ®çš„åŠŸèƒ½æ–¹æ³•,å®é™…ä¸Šè°ƒç”¨çˆ¶ç±»ExportOperateä¸­çš„æ–¹æ³•
+		operate.export("æµ‹è¯•æ•°æ®");
 	}
 }

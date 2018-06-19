@@ -1,8 +1,8 @@
 package cn.javass.dp.factorymethod.example2;
 /**
- * ¹¤³§·½·¨Ëù´´½¨µÄProduct¶ÔÏóµÄ½Ó¿Ú
+ * å·¥å‚æ–¹æ³•æ‰€åˆ›å»ºçš„Productå¯¹è±¡çš„æ¥å£
  */
 public interface Product {
-	//¿ÉÒÔ¶¨ÒåProductµÄ·½·¨
+	//å¯ä»¥å®šä¹‰Productçš„æ–¹æ³•
 }
 
