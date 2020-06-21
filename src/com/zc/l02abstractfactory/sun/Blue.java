@@ -2,8 +2,8 @@ package com.zc.l02abstractfactory.sun;
 
 public class Blue implements Color {
 
-   @Override
-   public void fill() {
-      System.out.println("Inside Blue::fill() method.");
-   }
+    @Override
+    public void fill() {
+        System.out.println("Inside Blue::fill() method." );
+    }
 }

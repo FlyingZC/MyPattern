@@ -3,8 +3,7 @@ package cn.javass.dp.proxy.example3;
 /**
  * 定义用户数据对象的接口
  */
-public interface UserModelApi
-{
+public interface UserModelApi {
     public String getUserId();
 
     public void setUserId(String userId);

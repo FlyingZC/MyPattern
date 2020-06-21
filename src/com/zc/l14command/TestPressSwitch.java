@@ -1,9 +1,7 @@
 package com.zc.l14command;
 
-public class TestPressSwitch
-{
-    public static void main(String[] args)
-    {
+public class TestPressSwitch {
+    public static void main(String[] args) {
         AirConditioner airConditioner = new AirConditioner();
         Command switchOn = new StartCommand(airConditioner);
         Command switchOff = new StopCommand(airConditioner);

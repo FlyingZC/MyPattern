@@ -1,9 +1,7 @@
 package com.zc.l17mediator;
 
-public class MediatorTest
-{
-    public static void main(String[] args)
-    {
+public class MediatorTest {
+    public static void main(String[] args) {
         Mediator mediator = new Mediator();
         Buyer indianBuyer = new IndianBuyer(mediator);
         Buyer frenchBuyer = new FrenchBuyer(mediator);
@@ -13,13 +11,11 @@ public class MediatorTest
         DollarConverter dollarConverter = new DollarConverter(mediator);
         float indianBidMoney = 5.0f;
         // 以后优化成竞争
-        while (!indianBuyer.attemptToPurchase(indianBidMoney))
-        {
+        while (!indianBuyer.attemptToPurchase(indianBidMoney)) {
             indianBidMoney += 3.0f;
         }
         float frenchBidMoney = 3.0f;
-        while (!frenchBuyer.attemptToPurchase(frenchBidMoney))
-        {
+        while (!frenchBuyer.attemptToPurchase(frenchBidMoney)) {
             frenchBidMoney += 5f;
         }
     }

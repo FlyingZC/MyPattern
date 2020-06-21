@@ -1,30 +1,25 @@
 package com.zc.l07bridge.tv;
 
-public class AndroidTV implements TV
-{
+public class AndroidTV implements TV {
 
     @Override
-    public void powerOn()
-    {
-        System.out.println("AndroidTV powerOn");
+    public void powerOn() {
+        System.out.println("AndroidTV powerOn" );
     }
 
     @Override
-    public void powerOff()
-    {
-        System.out.println("AndroidTV powerOff");
+    public void powerOff() {
+        System.out.println("AndroidTV powerOff" );
     }
 
     @Override
-    public void changeChannel(int channel)
-    {
+    public void changeChannel(int channel) {
         System.out.println("AndroidTV changeChanel: " + channel);
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "AndroidTV";
     }
-    
+
 }

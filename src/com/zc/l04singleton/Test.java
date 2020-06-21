@@ -2,10 +2,8 @@ package com.zc.l04singleton;
 
 import java.lang.reflect.Constructor;
 
-public class Test
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Test {
+    public static void main(String[] args) throws Exception {
         //第一次实例化
         SingletonA instanceA = SingletonA.getInstance();
         //访问的是已存在的实例,不调用构造器

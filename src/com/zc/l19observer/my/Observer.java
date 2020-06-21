@@ -1,6 +1,5 @@
 package com.zc.l19observer.my;
 
-public interface Observer
-{
+public interface Observer {
     void update(Subject subject);
 }

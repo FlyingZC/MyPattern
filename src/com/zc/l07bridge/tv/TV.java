@@ -1,7 +1,6 @@
 package com.zc.l07bridge.tv;
 
-public interface TV
-{
+public interface TV {
     public void powerOn();
 
     public void powerOff();

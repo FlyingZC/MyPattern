@@ -1,26 +1,24 @@
 package com.zc.l17mediator.my;
 
-public class CDDriver extends Colleague
-{
-    public String cdData; 
-    
-    public CDDriver(MainBoardMediator mainBoard)
-    {
+public class CDDriver extends Colleague {
+    public String cdData;
+
+    public CDDriver(MainBoardMediator mainBoard) {
         super(mainBoard);
     }
-    public void readData()
-    {
+
+    public void readData() {
         this.cdData = "videooooooo,audioooooooo";
         //1. 通知主板
         super.getMediator().notification(this);
     }
-    public String getCdData()
-    {
+
+    public String getCdData() {
         return cdData;
     }
-    public void setCdData(String cdData)
-    {
+
+    public void setCdData(String cdData) {
         this.cdData = cdData;
     }
-    
+
 }

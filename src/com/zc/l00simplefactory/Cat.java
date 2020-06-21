@@ -1,38 +1,33 @@
 package com.zc.l00simplefactory;
 
-public class Cat implements Pet{
+public class Cat implements Pet {
     private String name;
     private Integer age;
-    
-	public String getName()
-    {
+
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Integer getAge()
-    {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(Integer age)
-    {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
     @Override
-	public String petSound() {
-		return "Cat miaomiao...";
-	}
+    public String petSound() {
+        return "Cat miaomiao...";
+    }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Cat []";
     }
-	
+
 }

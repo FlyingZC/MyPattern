@@ -1,22 +1,18 @@
 package com.zc.l24nullobject;
 
-public class RealCustomer extends AbstractCustomer
-{
+public class RealCustomer extends AbstractCustomer {
 
-    public RealCustomer(String name)
-    {
+    public RealCustomer(String name) {
         this.name = name;
     }
 
     @Override
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
     @Override
-    public boolean isNil()
-    {
+    public boolean isNil() {
         return false;
     }
 }

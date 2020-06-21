@@ -1,14 +1,15 @@
 package com.zc.z06command;
 
 public class DoorOffCommand implements Command {
-	private Door door;
-	public DoorOffCommand(Door door) {
-		this.door=door;
-	}
+    private Door door;
 
-	@Override
-	public void execute() {
-		door.close();
-	}
+    public DoorOffCommand(Door door) {
+        this.door = door;
+    }
+
+    @Override
+    public void execute() {
+        door.close();
+    }
 
 }

@@ -1,17 +1,14 @@
 package com.zc.l24nullobject;
 
-public class NullCustomer extends AbstractCustomer
-{
+public class NullCustomer extends AbstractCustomer {
 
     @Override
-    public String getName()
-    {
+    public String getName() {
         return "这是一个不存在的Customer";
     }
 
     @Override
-    public boolean isNil()
-    {
+    public boolean isNil() {
         return true;
     }
 }
